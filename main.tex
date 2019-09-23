@@ -1,0 +1,63 @@
+\documentclass[12pt, a4paper, twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage[a4paper,width=150mm, top=25mm, bottom=25mm, bindingoffset=6mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[RO,LE]{Thesis Title}
+\fancyfoot{}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,RE]{Author Name}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+
+\usepackage[style=authoryear, backend=biber]{biblatex}
+\addbibresource{references.bib}  
+\listfiles
+
+\title{
+    {Thesis Title}\\
+    {\large Institution}\\ 
+    {\includegraphics{img.png}}
+}
+\author{Author Name}
+\date{Day Month Year}
+\begin{document}
+ 
+\maketitle
+ 
+\chapter*{Abstract}
+\input{tex/abstract}
+ 
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+
+\chapter{introduction}
+\input{tex/introduction}
+
+\chapter{Methods}
+\input{tex/methods}
+
+\chapter{Results}
+\input{tex/results}
+
+\chapter{Discussion}
+\input{tex/discussion}
+
+\chapter{Acknowledgements}
+\input{tex/acknowledgements}
+
+\appendix
+\chapter{Appendix}
+\input{tex/appendix}
+
+\printbibliography
+
+\end{document}
+
