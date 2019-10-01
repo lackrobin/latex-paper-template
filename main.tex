@@ -6,11 +6,11 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhead{}
-\fancyhead[RO,LE]{Thesis Title}
+\fancyhead[RO,LE]{\input{tex/text-resources/titletext}}
 \setlength{\headheight}{15pt}
 \fancyfoot{}
 \fancyfoot[LE,RO]{\thepage}
-\fancyfoot[LO,RE]{Author Name}
+\fancyfoot[LO,RE]{\input{tex/text-resources/author}}
 \renewcommand{\headrulewidth}{0.2pt}
 \renewcommand{\footrulewidth}{0.2pt}
 
@@ -18,18 +18,14 @@
 \addbibresource{references.bib}  
 \listfiles
 
-\title{
-    {Thesis Title}\\
-    {\large Institution}\\ 
-    {\includegraphics{img.png}}
-}
-\author{Author Name}
-\date{Day Month Year}
+\title{\input{tex/text-resources/titletext}}
+\author{\input{tex/text-resources/author}}
+\date{\today}
+
 \begin{document}
  
 \input{titlepage}
- 
-\chapter*{Abstract}
+
 \input{abstract}
  
 \tableofcontents
